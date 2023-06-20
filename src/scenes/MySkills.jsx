@@ -28,7 +28,7 @@ const MySkills = () => {
             fames odio in at.
           </p>
         </motion.div>
-          {/* IMAGE */}
+        {/* IMAGE */}
         <div className="mt-16 md:mt-0">
           {isAboveLarge ? (
             <div
@@ -37,18 +37,23 @@ const MySkills = () => {
             >
               <img
                 alt="skills"
-                className="z-10"
-                src="assets/skills-image.png"
+                className="
+                  z-10 
+                  object-contain
+                  h-[361px]
+                  w-[705px]
+                  "
+                src="assets/skills.png"
               />
             </div>
           ) : (
-            <img alt="skills" className="z-10" src="assets/skills-image.png" />
+            <img alt="skills" className="z-10" src="assets/skills.png" />
           )}
         </div>
       </div>
 
       {/* SKILLS */}
-      <div className="md:flex md:justify-between mt-16 gap-32">
+      <div className="md:flex md:justify-between mt-5 gap-32">
         {/* EXPERIENCE */}
         <motion.div
           className="md:w-1/3 mt-10"
@@ -71,9 +76,11 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow opacity-80 absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-          As a junior front end developer, 
-          I understand the importance of effective communication when working on projects with clients and team members.
-          I am able to clearly articulate my ideas and listen actively to feedback in order to ensure that everyone is on the same page.
+            As a junior front end developer, I understand the importance of
+            effective communication when working on projects with clients and
+            team members. I am able to clearly articulate my ideas and listen
+            actively to feedback in order to ensure that everyone is on the same
+            page.
           </p>
         </motion.div>
 
@@ -99,8 +106,10 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-blue absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-          My passion for front end development drives me to stay up to date with the latest technologies and best practices. 
-          I approach each project with a positive attitude and a willingness to learn, which allows me to tackle challenges with creativity and enthusiasm.
+            My passion for front end development drives me to stay up to date
+            with the latest technologies and best practices. I approach each
+            project with a positive attitude and a willingness to learn, which
+            allows me to tackle challenges with creativity and enthusiasm.
           </p>
         </motion.div>
         {/* IMAGINATIVE */}
@@ -125,9 +134,11 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-purple absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-          With a strong foundation in programming logic and a love for troubleshooting, I excel at finding solutions to complex problems. 
-          I enjoy breaking down problems into smaller, 
-          manageable pieces and using my analytical skills to come up with innovative solutions that meet the needs of the project.
+            With a strong foundation in programming logic and a love for
+            troubleshooting, I excel at finding solutions to complex problems. I
+            enjoy breaking down problems into smaller, manageable pieces and
+            using my analytical skills to come up with innovative solutions that
+            meet the needs of the project.
           </p>
         </motion.div>
       </div>

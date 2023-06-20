@@ -1,6 +1,7 @@
 import { useState } from "react";
 import AnchorLink from "react-anchor-link-smooth-scroll";
 import useMediaQuery from "../hooks/useMediaQuery";
+import { motion } from "framer-motion";
 import SocialMediaIcons from "../components/SocialMediaIcons";
 const Link = ({ page, selectedPage, setSelectedPage, isTopOfPage }) => {
   const lowerCasePage = page.toLowerCase();
@@ -104,8 +105,20 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
               />
             </div>
             <div className="flex justify-center items-center gap-10">
-              <SocialMediaIcons />
-              <div className="relative flex justify-center group w-[160px] h-[50px]">
+              <SocialMediaIcons
+                selectedPage={selectedPage}
+                setSelectedPage={setSelectedPage}
+              />
+              {/* <motion.button
+                className="
+                    relative 
+                    flex 
+                    justify-center 
+                    group 
+                    w-[160px] 
+                    h-[50px]"
+                whileTap={{ scale: 1.1 }}
+              >
                 <div
                   className="
                             absolute
@@ -133,9 +146,9 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
                   onClick={() => setSelectedPage("contact")}
                   href="#contact"
                 >
-                  Contact Me
+                  <img src="../assets/icons8-gmail.png" alt="gmail" />
                 </AnchorLink>
-              </div>
+              </motion.button> */}
             </div>
 
             {/* 
@@ -204,3 +217,4 @@ const Navbar = ({ isTopOfPage, selectedPage, setSelectedPage }) => {
   );
 };
 export default Navbar;
+export { Link };
