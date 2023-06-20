@@ -724,6 +724,11 @@ video {
   margin-bottom: 50px;
 }
 
+.mx-10{
+  margin-left: 2.5rem;
+  margin-right: 2.5rem;
+}
+
 .mb-10{
   margin-bottom: 2.5rem;
 }

@@ -24,8 +24,8 @@ const MySkills = () => {
           </p>
           <LineGradient width="w-1/3" />
           <p className="mt-10 mb-7">
-            Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-            fames odio in at.
+            Great community and a fast paced development of new technologies
+            boosts motivation for learning and continuous self-improvement!
           </p>
         </motion.div>
         {/* IMAGE */}
@@ -76,9 +76,9 @@ const MySkills = () => {
             <div className="w-1/2 md:w-3/4 h-32 bg-yellow opacity-80 absolute right-0 top-0 z-[-1]" />
           </div>
           <p className="mt-5">
-            As a junior front end developer, I understand the importance of
-            effective communication when working on projects with clients and
-            team members. I am able to clearly articulate my ideas and listen
+            As a junior web developer, I understand the importance of effective
+            communication when working on projects with clients and team
+            members. I am able to clearly articulate my ideas and listen
             actively to feedback in order to ensure that everyone is on the same
             page.
           </p>

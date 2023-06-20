@@ -134,12 +134,14 @@ const Landing = ({ setSelectedPage }) => {
           </p>
 
           <p className="mt-10 mb-7 text-sm text-center md:text-start">
-            Exercitation esse sit enim adipisicing deserunt nostrud laborum
-            Lorem ad eiusmod. Aliqua ipsum minim amet nisi consequat quis sunt
-            officia. Laborum ullamco duis nostrud esse nisi do id. Dolor sunt
-            anim veniam Lorem ut amet sunt exercitation exercitation duis in
-            veniam voluptate. In aute excepteur est id. Velit nisi deserunt
-            irure nulla id esse est nulla ullamco esse laboris.
+            I am a passionate and ambitious web developer, driven by a strong
+            enthusiasm for the field. Over the past year, I have dedicated
+            myself to refining my skills and expanding my knowledge in web
+            development. Now, I am actively seeking a challenging opportunity
+            where I can further develop my expertise and thrive as both a
+            professional and an individual. With a relentless pursuit of growth,
+            I am ready to contribute my skills and make a meaningful impact in a
+            dynamic work environment.
           </p>
         </motion.div>
         {/* CALL TO ACTIONS */}
@@ -277,10 +279,6 @@ const Landing = ({ setSelectedPage }) => {
               MY <span className="text-yellow">STACK</span>
             </p>
             <LineGradient width="w-1/3" />
-            <p className="mt-10 mb-7">
-              Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
-              fames odio in at.
-            </p>
           </motion.div>
         )}
         {/* STACK ICONS */}

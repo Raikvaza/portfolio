@@ -28,6 +28,7 @@ const overlayStyles = `
   bg-grey 
   z-30 
   flex 
+  
   flex-col 
   justify-center 
   items-center 
@@ -42,10 +43,7 @@ const Project = ({ title }) => {
     <motion.div variants={projectVariant} className="relative">
       <div className={overlayStyles}>
         <p className="text-2xl font-playfair">{title}</p>
-        <p className="mt-7">
-          Curabitur arcu erat, accumsan id imperdiet et, porttitor at sem. Nulla
-          porttitor accumsan tincidunt.
-        </p>
+        <p className="mt-7">{/* For later optimization */}</p>
       </div>
       <img src={`../assets/${projectTitle}.jpeg`} alt={projectTitle} />
     </motion.div>
@@ -104,9 +102,9 @@ const Projects = () => {
           >
             <div className="relative h-full w-full">
               <div className={`${overlayStyles}`}>
-                <p className="mt-7">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem. Nulla porttitor accumsan tincidunt.
+                <p className="mt-7 mx-10">
+                  Financial Adviser app written with the usage of Go ,React,
+                  SQLite and other external libraries.
                 </p>
               </div>
             </div>
@@ -123,9 +121,9 @@ const Projects = () => {
           >
             <div className="relative h-full w-full">
               <div className={`${overlayStyles} `}>
-                <p className="mt-7">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem. Nulla porttitor accumsan tincidunt.
+                <p className="mt-7 mx-10">
+                  Real Time Forum project written with the usage of Go, React,
+                  SQLite and Mui.
                 </p>
               </div>
             </div>
@@ -142,9 +140,9 @@ const Projects = () => {
           >
             <div className="relative h-full w-full">
               <div className={`${overlayStyles}`}>
-                <p className="mt-7">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem. Nulla porttitor accumsan tincidunt.
+                <p className="mt-7 mx-10">
+                  Net Cat is a TCP chat that supports numerous synchronous
+                  connections and allows communication between the users.
                 </p>
               </div>
             </div>
@@ -162,9 +160,10 @@ const Projects = () => {
           >
             <div className="relative h-full w-full">
               <div className={`${overlayStyles}`}>
-                <p className="mt-7">
-                  Curabitur arcu erat, accumsan id imperdiet et, porttitor at
-                  sem. Nulla porttitor accumsan tincidunt.
+                <p className="mt-7 mx-10">
+                  Amir Watches is my current project that is still in progress.
+                  I am rewriting an existing web-store with the refined design
+                  and user experience .
                 </p>
               </div>
             </div>

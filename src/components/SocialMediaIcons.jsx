@@ -4,23 +4,16 @@ const SocialMediaIcons = ({ selectedPage, setSelectedPage }) => {
     <div className="flex justify-center md:justify-start my-10 gap-7">
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.linkedin.com"
+        href="https://www.linkedin.com/in/raikvaza-undefined-80b368239/"
         target="_blank"
         rel="noreferrer"
       >
         <img alt="linkedin-link" src="../assets/linkedin.png" />
       </a>
+
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.twitter.com"
-        target="_blank"
-        rel="noreferrer"
-      >
-        <img alt="twitter-link" src="../assets/twitter.png" />
-      </a>
-      <a
-        className="hover:opacity-50 transition duration-500"
-        href="https://www.facebook.com"
+        href="https://ru-ru.facebook.com/ahmetzhan.seythan/"
         target="_blank"
         rel="noreferrer"
       >
@@ -28,7 +21,7 @@ const SocialMediaIcons = ({ selectedPage, setSelectedPage }) => {
       </a>
       <a
         className="hover:opacity-50 transition duration-500"
-        href="https://www.instagram.com"
+        href="https://www.instagram.com/raikvaza/"
         target="_blank"
         rel="noreferrer"
       >
@@ -41,7 +34,7 @@ const SocialMediaIcons = ({ selectedPage, setSelectedPage }) => {
         href="#contact"
       >
         <img
-          alt="instagram-link"
+          alt="contact-link"
           src="../assets/icons8-gmail.png"
           className="w-[30px] h-[30px]"
         />
