@@ -7,35 +7,96 @@ import LineGradient from "../components/LineGradient";
 
 const Landing = ({ setSelectedPage }) => {
   const isAboveMediumScreens = useMediaQuery("(min-width: 1060px)");
-
+  const imageAnimation = {
+    initial: {
+      scale: 0,
+      rotate: 0,
+    },
+    animate: {
+      scale: 1,
+      rotate: 360,
+      transition: {
+        duration: 0.8,
+        ease: "easeInOut",
+        delay: 0.2,
+      },
+    },
+  };
   return (
     <section
       id="home"
-      className="md:flex md:justify-between md:items-center md:h-full gap-16 py-10"
+      className="
+        md:flex 
+        md:justify-between 
+        md:items-center 
+        md:h-full 
+        gap-16 
+        py-10
+      "
     >
       {/* IMAGE SECTION */}
-      <div className="md:order-2 flex justify-center basis-3/5 z-10 mt-16 md:mt-32">
+      <div
+        className="
+          md:order-2 
+          flex 
+          justify-center 
+          basis-3/5 
+          z-10 
+          mt-16 
+          md:mt-32
+        "
+      >
         {isAboveMediumScreens ? (
-          // The div that gives a border to a profile image
-          <div
-            className="relative z-0 ml-20 before:absolute
-                            before:w-full before:max-w-[600px] before:h-full
-                            before:content-avatar-border before:scale-[115%] before:z-[-1]"
+          <motion.div
+            className="
+              relative 
+              z-0 
+              ml-20 
+              before:absolute
+              before:w-full 
+              before:max-w-[600px] 
+              before:h-full
+              before:content-avatar-border 
+              before:scale-[115%] 
+              before:z-[-1]
+            "
+            initial="initial"
+            animate="animate"
+            variants={imageAnimation}
           >
-            <img
+            <motion.img
               alt="profile"
-              className="hover:filter rounded-full hover:saturate-150 transition duration-500 z-10 w-full
-                            max-w-[300px] md:max-w-[500px]"
-              // src="../assets/profile-image.png"
+              className="
+                hover:filter 
+                rounded-full 
+                hover:saturate-150 
+                z-10 
+                w-full 
+                max-w-[300px] 
+                md:max-w-[500px]
+                "
               src="../assets/profile-pic(3).png"
+              initial="initial"
+              animate="animate"
+              variants={imageAnimation}
             />
-          </div>
+          </motion.div>
         ) : (
-          <img
+          <motion.img
             alt="profile"
-            className="hover:filter rounded-full hover:saturate-200 transition duration-500 z-10 w-full
-                            max-w-[400px] md:max-w-[600px]"
+            className="
+              hover:filter 
+              rounded-full 
+              hover:saturate-200 
+              z-10 
+              w-full 
+              max-w-[400px] 
+              md:max-w-[600px]
+            "
             src="../assets/profile-pic(3).png"
+            initial="initial"
+            animate="animate"
+            variants={imageAnimation}
           />
         )}
       </div>
@@ -55,9 +116,18 @@ const Landing = ({ setSelectedPage }) => {
           <p className="text-5xl font-playfair z-10 text-center md:text-start">
             Akhmetzhan {""}
             <span
-              className="xs:relative xs:text-deep-blue xs:font-semibold z-20
-                                    xs:before:content-brushY xs:before:scale-[115%] before:absolute before:-left-[8px]
-                                    before:-top-[105px] before:z-[-1]"
+              className="
+                xs:relative 
+              xs:text-deep-blue 
+                xs:font-semibold 
+                z-20
+                xs:before:content-brushY 
+                xs:before:scale-[115%] 
+                before:absolute 
+                before:-left-[8px]
+                before:-top-[105px] 
+                before:z-[-1]
+              "
             >
               Seitkhan
             </span>
@@ -86,19 +156,29 @@ const Landing = ({ setSelectedPage }) => {
         >
           {/* GROUP HOVER */}
           <div className="relative flex justify-center group w-[160px] h-[50px]">
-            <div className="absolute inset-0 w-full h-full bg-yellow group-hover:blur-md transition duration-500" />
+            <div
+              className="
+              absolute 
+              inset-0 
+              w-full 
+              h-full 
+              bg-yellow 
+              group-hover:blur-md 
+              transition 
+              duration-500"
+            />
             <AnchorLink
               className="
-                                    relative
-                                    w-full h-full
-                                    bg-gradient-rain-yellow
-                                    text-center py-3 px-7
-                                    text-deep-blue 
-                                    rounded-sm 
-                                    font-semibold
-                                    hover:bg-blue 
-                                    hover:text-white 
-                                    transition duration-500"
+                relative
+                w-full h-full
+                bg-gradient-rain-yellow
+                text-center py-3 px-7
+                text-deep-blue 
+                rounded-sm 
+                font-semibold
+                hover:bg-blue 
+                hover:text-white 
+                transition duration-500"
               onClick={() => setSelectedPage("contact")}
               href="#contact"
             >
@@ -107,20 +187,30 @@ const Landing = ({ setSelectedPage }) => {
           </div>
           <AnchorLink
             className="
-                                w-[160px] h-[50px]
-                                text-center
-                                rounded-r-sm 
-                                bg-gradient-rainblue 
-                                py-0.5
-                                pr-0.5 
-                            "
+              w-[160px] h-[50px]
+              text-center
+              rounded-r-sm 
+              bg-gradient-rainblue 
+              py-0.5
+              pr-0.5 
+            "
             onClick={() => setSelectedPage("contact")}
             href="#contact"
           >
             <div
-              className="bg-deep-blue hover:text-yellow transition duration-500 w-full h-full flex items-center justify-center
-                            font-semibold px-10
-                            "
+              className="
+                bg-deep-blue 
+                hover:text-yellow 
+                transition 
+                duration-500 
+                w-full 
+                h-full 
+                flex 
+                items-center 
+                justify-center
+                font-semibold 
+                px-10
+              "
             >
               Let's talk
             </div>
@@ -130,7 +220,7 @@ const Landing = ({ setSelectedPage }) => {
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }} // 50% of the div should be visible for the animation to run, and the animation will only run once
-          transition={{ delay: 0.4, duration: 0.5 }} // How long the transition will take place
+          transition={{ delay: 0.5, duration: 0.5 }} // How long the transition will take place
           variants={{
             hidden: { opacity: 0, x: -100 }, //-50 by def
             visible: { opacity: 1, x: 0 },
@@ -138,22 +228,75 @@ const Landing = ({ setSelectedPage }) => {
           className="mt-10"
         >
           <LineGradient />
-          <div className="mt-10 translate-x-10 text-3xl font-medium z-10 text-center md:text-start">
-            Stack
-          </div>
         </motion.div>
-
+        {/* STACK HEADING */}
+        {isAboveMediumScreens ? (
+          <motion.div
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }} // 50% of the div should be visible for the animation to run, and the animation will only run once
+            transition={{ delay: 0.6, duration: 0.5 }} // How long the transition will take place
+            variants={{
+              hidden: { opacity: 0, x: -100 }, //-50 by def
+              visible: { opacity: 1, x: 0 },
+            }}
+            className="mb-28"
+          >
+            <div className="my-[60px] z-20">
+              <p className="text-5xl font-playfair z-20 text-start md:text-center">
+                <span
+                  className="
+                xs:relative 
+                xs:text-deep-blue 
+                xs:font-bold
+                xs:before:content-brushY_2 
+                xs:before:scale-[55%] 
+                before:absolute
+                before:-left-[150px]
+                before:-top-[110px] 
+                before:z-[-1]"
+                >
+                  Stack
+                </span>
+              </p>
+            </div>
+          </motion.div>
+        ) : (
+          <motion.div
+            className="md:w-1/3"
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true, amount: 0.5 }}
+            transition={{ duration: 0.5 }}
+            variants={{
+              hidden: { opacity: 0, x: -50 },
+              visible: { opacity: 1, x: 0 },
+            }}
+          >
+            <p className="font-playfair font-semibold text-4xl mb-5">
+              MY <span className="text-yellow">STACK</span>
+            </p>
+            <LineGradient width="w-1/3" />
+            <p className="mt-10 mb-7">
+              Aliquam, amet dui feugiat facilisi dui. Aliquam aliquet integer ut
+              fames odio in at.
+            </p>
+          </motion.div>
+        )}
+        {/* STACK ICONS */}
+        <StackIcons />
+        {/* BOTTOM LINE GRADIENT */}
         <motion.div
           initial="hidden"
           whileInView="visible"
           viewport={{ once: true, amount: 0.5 }} // 50% of the div should be visible for the animation to run, and the animation will only run once
-          transition={{ delay: 0.4, duration: 0.5 }} // How long the transition will take place
+          transition={{ delay: 0.7, duration: 0.5 }} // How long the transition will take place
           variants={{
             hidden: { opacity: 0, x: -100 }, //-50 by def
             visible: { opacity: 1, x: 0 },
           }}
         >
-          <StackIcons />
+          <LineGradient />
         </motion.div>
       </div>
     </section>

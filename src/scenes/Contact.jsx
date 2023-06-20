@@ -42,7 +42,7 @@ const Contact = () => {
       </motion.div>
 
       {/* FORM & IMAGE */}
-      <div className="md:flex md:justify-between gap-16 mt-5">
+      <div className="md:flex md:justify-evenly mt-5">
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -54,9 +54,13 @@ const Contact = () => {
           }}
           className="basis-1/2 flex justify-center"
         >
-          <img src="../assets/contact-image.jpeg" alt="contact" />
+          <img
+            src="../assets/contactme.png"
+            alt="contact-me"
+            className="w-[100%] h-auto object-contain"
+          />
         </motion.div>
-          {/* FORM CONTAINER */}
+        {/* FORM CONTAINER */}
         <motion.div
           initial="hidden"
           whileInView="visible"
@@ -68,7 +72,7 @@ const Contact = () => {
           }}
           className="basis-1/2 mt-10 md:mt-0"
         >
-            {/* FORM */}
+          {/* FORM */}
           <form
             target="_blank"
             onSubmit={onSubmit}
@@ -76,7 +80,13 @@ const Contact = () => {
             method="POST"
           >
             <input
-              className="w-full rounded-lg bg-blue font-semibold placeholder-opaque-black p-3"
+              className="
+                w-full 
+                rounded-lg 
+                bg-blue 
+                font-semibold 
+                placeholder-opaque-black 
+                p-3"
               type="text"
               placeholder="NAME"
               {...register("name", {
@@ -92,7 +102,15 @@ const Contact = () => {
             )}
 
             <input
-              className="w-full bg-blue rounded-lg font-semibold placeholder-opaque-black p-3 mt-5"
+              className="
+                w-full 
+                bg-blue 
+                rounded-lg 
+                font-semibold 
+                placeholder-opaque-black 
+                p-3 
+                mt-5
+              "
               type="text"
               placeholder="EMAIL"
               {...register("email", {
@@ -108,7 +126,15 @@ const Contact = () => {
             )}
 
             <textarea
-              className="w-full bg-blue rounded-lg font-semibold placeholder-opaque-black p-3 mt-5"
+              className="
+                w-full
+                bg-blue
+                rounded-lg
+                font-semibold
+                placeholder-opaque-black
+                p-3
+                mt-5
+              "
               name="message"
               placeholder="MESSAGE"
               rows="4"
@@ -127,12 +153,21 @@ const Contact = () => {
               </p>
             )}
 
-            <button
-              className="p-5 bg-yellow font-semibold text-deep-blue mt-5 hover:bg-red hover:text-white transition duration-500"
+            <motion.button
+              className="
+                p-5
+                rounded-lg
+                bg-yellow 
+                font-semibold 
+                text-deep-blue 
+                mt-5  
+              "
+              whileHover={{ scale: 1.1 }}
+              whileTap={{ scale: 0.9 }}
               type="submit"
             >
               SEND ME A MESSAGE
-            </button>
+            </motion.button>
           </form>
         </motion.div>
       </div>

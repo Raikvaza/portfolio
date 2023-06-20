@@ -1,10 +1,10 @@
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: ["./src/**/*.{html,js,jsx}"],
-  mode: 'jit',
+  mode: "jit",
   theme: {
     extend: {
-      colors:{
+      colors: {
         blue: "#2CBCE9",
         red: "#DC4492",
         purple: "#e36b8d",
@@ -19,10 +19,10 @@ module.exports = {
       backgroundImage: (theme) => ({
         // "gradient-rainbow":
         //   "linear-gradient(81.66deg, #00B5EE 7.21%, #FF45A4 45.05%, #FFBA00 78.07%)",
-          "gradient-rainbow":
+        "gradient-rainbow":
           "linear-gradient(90deg, rgba(44,188,233,1) 0%, rgba(227,107,141,1) 33%, rgba(233,131,124,1) 62%, rgba(253,204,73,1) 100%)",
-        
-          "gradient-rainblue":
+
+        "gradient-rainblue":
           "linear-gradient(90deg, rgba(44,188,233,1) 0%, rgba(227,107,141,1) 33%, rgba(233,131,124,1) 62%, rgba(253,204,73,1) 100%)",
         // "gradient-rainblue":
         //   "linear-gradient(90deg, #24CBFF 14.53%, #FC59FF 69.36%, #FFBD0C 117.73%)",
@@ -38,6 +38,7 @@ module.exports = {
         brush: "url('./assets/brush.png')",
         logo: "url('./assets/logo.png')",
         brushY: "url('./assets/brushY.png')",
+        brushY_2: "url('./assets/brushY-2.png')",
         alem: "url('./assets/alem.png')",
         turing: "url('./assets/turing.png')",
         NU: "url('./assets/NU.png')",
@@ -53,4 +54,4 @@ module.exports = {
     },
   },
   plugins: [],
-}
+};
