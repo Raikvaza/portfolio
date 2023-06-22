@@ -1,6 +1,6 @@
 # My Portfolio
 
-[Portfolio LINK] (https://iridescent-stardust-285530.netlify.app)
+[Portfolio LINK](https://iridescent-stardust-285530.netlify.app)
 
 ## Description
 
